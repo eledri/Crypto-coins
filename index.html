@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="coins.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <button onclick="topFunction()" class="btn btn-warning" id="topButton" title="Go to top"><i
+            class="fas fa-arrow-up pageUp"></i></button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"><i class="fab fa-bitcoin"></i>Crypto Currency</a>
+            <div id="navbar" class="collapse navbar-collapse" id="navbarNav">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+        </div>
+
+        <div class="container-fluid main" id="main">
+            <br>
+            <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="nav-home-tab" data-toggle="pill" href="#nav-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Currency</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="nav-profile-tab" data-toggle="pill" href="#nav-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Live Reports</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="nav-contact-tab" data-toggle="pill" href="#nav-contact" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">About</a>
+                </li>
+                <div id="searchBox">
+                    <i id="searchIcon" class="fas fa-search d-none d-xl-block "></i>
+                    <div class="input-group  input-group-sm " id="search">
+                        <input type="text" id="searchCoins" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-sm" placeholder="Search Coins">
+                    </div>
+                </div>
+                <button id="clearSearch"><i class="fas fa-times"></i></button>
+
+            </ul>
+            <span id="toggleArr" class="badge badge-light"></span>
+            <div class="tab-content " id="nav-tabContent">
+                <div class="tab-pane show active  " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div id="mainRow" class="row">
+                        <div class="loader1 text-center">
+                            <div class="loader-inner">
+                                <div class="lds-ellipsis">
+                                    <div class="loadDiv1"></div>
+                                    <div class="loadDiv2"></div>
+                                    <div class="loadDiv3"></div>
+                                    <div class="loadDiv4"></div>
+                                </div>
+                                <h4 class="text-uppercase font-weight-bold"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> </div>
+                <div class="tab-pane " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="row">
+                        <div class="card mb-3" style="max-width: 1140px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="assets/images/profile.jpg" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">About Me</h5>
+                                        <p class="card-text"><i class="fas fa-user"></i>Programer : Elad Edri</p>
+                                        <p class="card-text"><i class="fas fa-calendar-alt"></i>Age: 34 years old</p>
+                                        <p class="card-text"><i class="fas fa-envelope"></i>Email: Eledri1306@gmail.com
+                                        </p>
+                                        <br>
+                                        <h5 class="card-title">About this Project</h5>
+                                        <p class="card-text">This project presents information and reports for virtual
+                                            currencies.<br>
+                                            In the home page there are few selected virtual coins (the more common
+                                            ones),
+                                            <br>
+                                            also you can see information for each of the coins.
+                                            <br>
+                                            You can mark up to 5 coins to display on the Live Reports page with real
+                                            time updated information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">It Seems that you reached max number of coins!</h5>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="cancelModal" class="btn btn-secondary"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="button" id="saveModal" class="btn btn-primary" data-dismiss="modal">Save
+                                changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div id="footer" class="parallaxFooter ">
+            <br><br><br>
+            <div id="footerInfo">
+
+            </div>
+            <br><br> <br><br> <br>
+            <p class="footer">&copy;2020 All Rights Received ,Built By Elad Edri </p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="coins.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="assets/plugins/text-ticker-json/ticker.js"></script>
+
+</html>
